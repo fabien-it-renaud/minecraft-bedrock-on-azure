@@ -38,7 +38,7 @@ var storageAccountName = '${serverName}storage'
 var javaMemory = (memory * 1024) - 200
 
 
-resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' = {
+resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   name: storageAccountName
   location: location
   sku: {
@@ -47,14 +47,14 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' = {
   kind: 'StorageV2'
 }
 
-resource storageShare 'Microsoft.Storage/storageAccounts/fileServices/shares@2019-06-01' = {
+resource storageShare 'Microsoft.Storage/storageAccounts/fileServices/shares@2022-09-01' = {
   name:  '${storageAccountName}/default/${fileShareName}'
   dependsOn: [ 
     storageAccount 
   ]
 }
 
-resource containerGroup 'Microsoft.ContainerInstance/containerGroups@2019-12-01' = {
+resource containerGroup 'Microsoft.ContainerInstance/containerGroups@2023-05-01' = {
   name: serverName
   location: location
   dependsOn: [
