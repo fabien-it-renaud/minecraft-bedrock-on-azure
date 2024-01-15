@@ -116,7 +116,7 @@
           {
             "name": "[parameters('serverName')]",
             "properties": {
-              "image": "itzg/minecraft-server",
+              "image": "itzg/minecraft-bedrock-server",
               "environmentVariables": [
                 {
                   "name": "WHITELIST",

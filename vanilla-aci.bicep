@@ -65,7 +65,7 @@ resource containerGroup 'Microsoft.ContainerInstance/containerGroups@2019-12-01'
       {
         name: serverName
         properties: {
-          image: 'itzg/minecraft-server'
+          image: 'itzg/minecraft-bedrock-server'
           environmentVariables: [
             {
                 name: 'WHITELIST'
